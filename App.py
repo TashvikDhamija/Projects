@@ -5,7 +5,7 @@ import os
 
 
 class Login:
-
+    path = "*Directory*"
     # Constructor
     def __init__(self, master):
         self.master = master
@@ -40,7 +40,7 @@ class Login:
 
     # Password Verification
     def submit_button(self):
-        file_list = os.listdir(r"C:\Users\tashv\PycharmProjects\App")
+        file_list = os.listdir(path)
         username = self.username.get() + '.txt'
         if username in file_list:
             file1 = open(self.username.get() + '.txt')
@@ -107,7 +107,7 @@ class Register_user:
         self.quit_but.place(x=200, y=230, width=120)
 
     def submit_button(self):
-        file_list = os.listdir(r"C:\Users\tashv\PycharmProjects\App")
+        file_list = os.listdir(path)
         username = self.username.get() + '.txt'
         if username in file_list:
             c = tkm.askretrycancel("Change Password Error", "User Doesn't Exist")
@@ -152,7 +152,7 @@ class Change_pass:
         self.quit_but.place(x=140, y=310, width=120)
 
     def submit_button_user(self):
-        file_list = os.listdir(r"C:\Users\tashv\PycharmProjects\App")
+        file_list = os.listdir(path)
         username = self.username.get() + '.txt'
         if username in file_list:
             # Password Label
