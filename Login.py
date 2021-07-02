@@ -5,7 +5,7 @@ import os
 
 
 class Login:
-    path = "*Directory*"
+    pathB = "*Directory*"
     # Constructor
     def __init__(self, master):
         self.master = master
